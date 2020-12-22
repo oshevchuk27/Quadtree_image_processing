@@ -22,7 +22,7 @@ public class Node {
 	 * Determines whether a given node is a leaf.
 	 * @return true if the node is a leaf, false, otherwise.
 	 */
-	private boolean isLeaf() {
+	public boolean isLeaf() {
 		return children[0] == null &&
 				children[1] == null &&
 				children[2] == null &&
