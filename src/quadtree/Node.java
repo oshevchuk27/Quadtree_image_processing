@@ -5,9 +5,9 @@ public class Node {
 	private Color color; // the mean color of all pixels stored in the node
 	private int height; // the height of the node
 	private int width; // the width of the node
-	
+
 	/**
-	 * Constructor for Node class. Stores 
+	 * Constructor for Node class. Stores
 	 * the height and the width of each node.
 	 * @param height
 	 * @param width
@@ -17,16 +17,32 @@ public class Node {
 		this.width = width;
 		children = new Node[4];
 	}
-	
+
 	/**
 	 * Determines whether a given node is a leaf.
 	 * @return true if the node is a leaf, false, otherwise.
 	 */
 	private boolean isLeaf() {
-		return children[0] == null && 
+		return children[0] == null &&
 				children[1] == null &&
 				children[2] == null &&
 				children[3] == null;
+	}
+
+	public int getHeight() {
+		return this.height;
+	}
+
+	public int getWidth() {
+		return this.width;
+	}
+
+	public Color getColor() {
+		return this.color;
+	}
+
+	public Node[] getChildren() {
+		return this.children;
 	}
 
 }
